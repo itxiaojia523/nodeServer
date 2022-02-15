@@ -2,9 +2,9 @@ const mysql = require("mysql"); //引入mysql
 const jwt = require('jsonwebtoken')
 // 开发环境的host
 // let host = 'http://localhost'
-let host = 'http://127.0.0.1'
+// let host = 'http://127.0.0.1'
 // 生产环境的host ip
-// let host = 'http://8.130.22.222'
+let host = 'http://144.202.27.38/'
 
 // 开发环境的port
 let port = 9000
@@ -14,10 +14,11 @@ let port = 9000
 // 创建连接池
 const pool = mysql.createPool({
     host: "localhost",  // 连接的服务器(代码托管到线上后，需改为内网IP，而非外网)
-    port: 3306, // mysql服务运行的端口
+    port: 3306, // mysql服务运行的端口 服务器也要开启端口
     database: "cms", // 选择某个数据库
     user: "root",   // 用户名
-    password: "123456", // 用户密码
+    // password: "123456", // 用户密码  服务器端我的密码不一样MyPass123!
+    password: "MyPass123!"
 })
 
 //对数据库进行增删改查操作的基础
